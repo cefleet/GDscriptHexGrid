@@ -5,6 +5,20 @@ This was the first thing I did in GD script so it really could be much better. H
 I had started to re-write it in c++ but never finshed it so that is included as well. This is the only thing I have ever written in c++ so don't judge me.
 
 
+**Usage for GDscript:**
+```python
+var HexAPI = load("res://'folderToGDscriptHexGrid'/HexAPI.gd").new()
+var to = HexAPI.engine._hex(q,r,s)
+var from = HexAPI.engine._hex(q,r,s)
+var obstacles = [HexAPI.engine._hex(q,r,s),HexAPI.engine._hex(q,r,s),HexAPI.engine._hex(q,r,s)]
+var hexes = HexAPI.astar._aStarGetPathTo(from,to, obstacles)
+```
+
+**Notes for c++ **
+- Astar does not work ...Not really going to make it work.
+- hex and points are literally just Vector3 and Vector2 respectivly. I never understood how to make my own variant or if I should even try.
+- I don't know c++, so this is bad c++
+
 
 
 ----------------------------------------------------------------------------
