@@ -4,13 +4,21 @@ A hex grid engine with a* pathfinding included
 This was the first thing I did in GD script so it really could be much better. However I was asked to share it and I am willing to.
 I had started to re-write it in c++ but never finshed it so that is included as well. This is the only thing I have ever written in c++ so don't judge me.
 
+It is also very poorly documented.
 
 **Usage for GDscript:**
 ```python
 var HexAPI = load("res://'folderToGDscriptHexGrid'/HexAPI.gd").new()
+
 var to = HexAPI.engine._hex(q,r,s)
+
 var from = HexAPI.engine._hex(q,r,s)
+
 var obstacles = [HexAPI.engine._hex(q,r,s),HexAPI.engine._hex(q,r,s),HexAPI.engine._hex(q,r,s)]
+
+#Below only needs to be run when the distances is looking for is changed
+HexAPI.astar._astarGridSetup(obstacles,arrayOfHexes)
+
 var hexes = HexAPI.astar._aStarGetPathTo(from,to, obstacles)
 ```
 
