@@ -373,6 +373,7 @@ void HexGrid::createMap(){
 }
 
 void HexGrid::makePointyMap(){
+  hex_map.clear();
   for(int r = 0; r<rows; r++){
     double r_offset = floor(r/2);
     for(int q = -1*(r_offset); q < cols-r_offset; q++){
@@ -390,6 +391,7 @@ void HexGrid::makePointyMap(){
 }
 
 void HexGrid::makeFlatMap(){
+  hex_map.clear();
   for(int q = 0; q<cols; q++){
     double q_offset = floor(q/2);
     for(int r = -1*(q_offset); r < rows-q_offset; r++){
